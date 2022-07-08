@@ -1,0 +1,128 @@
+.thumbnail {
+  width: 100%;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author:hover {
+  text-decoration: underline;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 20px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 1280px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .video-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .video-author,
+  .video-stats {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .video-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .video-author,
+  .video-stats {
+    font-size: 12px;
+  }
+}
+
+.channel-picture {
+  position: relative;
+  display: flex;
+}
+
+.channel-picture-tooltip {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  height: 80px;
+  width: 250px;
+  bottom: -50px;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.30);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.channel-picture:hover .channel-picture-tooltip {
+  opacity: 1;
+}
+
+.profile-picture-tooltip {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.video-author-tooltip {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
